@@ -36,6 +36,7 @@ type Context = inferAsyncReturnType<typeof createContext>;
 const t = initTRPC.context<Context>().create();
 
 const isAuthed = t.middleware(({ next, ctx }) => {
+    console.log('checking if authed')
     if (!ctx.auth.userId) {
         throw new TRPCError({ code: "UNAUTHORIZED", message: "Not authenticated" });
     }

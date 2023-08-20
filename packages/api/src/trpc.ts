@@ -7,6 +7,7 @@ const t = initTRPC.context<Context>().create({
   errorFormatter({ shape }) {
     return shape;
   },
+
 });
 
 const isAuthed = t.middleware(({ next, ctx }) => {
