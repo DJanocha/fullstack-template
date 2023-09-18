@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:react/recommended', 'standard', 'next'],
+  extends: ['plugin:react/recommended', 'next'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -13,7 +13,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  // plugins: ['react', '@typescript-eslint'],
+  plugins: [],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     'react/react-in-jsx-scope': 'off',

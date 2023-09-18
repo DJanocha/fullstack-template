@@ -2,19 +2,20 @@
   "name": "turbo",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev --concurrency 12",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --config prettier.config.js  --write \"**/*.{ts,tsx,md}\"",
+    "db:push": "cd packages/db && pnpm db:push",
+    "db:generate": "turbo db:generate --filter db",
+    "db:studio": "turbo dev --filter db",
+    "ui:generate:component": "cd packages/ui && pnpm generate:component"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier-config-custom": "workspace:*",
+    "dotenv-cli": "latest",
     "prettier": "latest",
     "turbo": "latest"
   },
