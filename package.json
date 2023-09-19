@@ -8,7 +8,7 @@
     "lint": "turbo run lint",
     "format": "prettier --config prettier.config.js  --write \"**/*.{ts,tsx,md}\"",
     "db:push": "cd packages/db && pnpm db:push",
-    "db:generate": "turbo db:generate --filter db",
+    "db:generate": "cd packages/db && pnpm db:generate",
     "db:studio": "turbo dev --filter db",
     "ui:generate:component": "cd packages/ui && pnpm generate:component"
   },
