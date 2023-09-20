@@ -36,12 +36,12 @@ This Turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
-### REMEMBER TO INSTALL DEPENDENCIES BEFORE RUNNNING ANY SCRIPT BELOW
+### REMEMBER TO INSTALL DEPENDENCIES AND GENERATE PRISMA CLIENT BEFORE RUNNNING ANY SCRIPT BELOW AND RENAME '.env.example' FILE TO '.env'
 
 To do that, run the following command:
 
 ```
-pnpm i
+pnpm i && pnpm db:generate
 ```
 
 ### Build
